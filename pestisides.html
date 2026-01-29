@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional pesticide solutions with comprehensive educational resources for safe and effective pest management">
+    <meta name="keywords" content="pesticides, insecticides, herbicides, fungicides, pest control, agricultural solutions">
+    <title>AgriShield Pro - Professional Pesticide Solutions & Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #2E8B57;
+            --secondary-color: #228B22;
+            --accent-color: #FFA500;
+            --warning-color: #FF4444;
+            --text-dark: #333;
+            --text-light: #666;
+            --background-light: #f8f9fa;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0,0,0,0.1);
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header and Navigation */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 8px 0;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 8px 16px;
+            border-radius: var(--border-radius);
+        }
+
+        .nav-menu a:hover {
+            background: var(--background-light);
+            color: var(--primary-color);
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: var(--background-light);
+            border-radius: var(--border-radius);
+            padding: 8px 12px;
+        }
+
+        .search-box input {
+            border: none;
+            background: none;
+            outline: none;
+            width: 200px;
+            padding: 4px;
+        }
+
+        .cart-icon, .user-icon {
+            position: relative;
+            color: var(--text-dark);
+            font-size: 1.2rem;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--warning-color);
+            color: var(--white);
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Main Content */
+        main {
+            margin-top: 120px;
+        }
+
+        .section {
+            display: none;
+            padding: 2rem 0;
+        }
+
+        .section.active {
+            display: block;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: var(--white);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        /* Featured Products */
+        .featured-products {
+            padding: 4rem 0;
+            background: var(--background-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: var(--primary-color);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .product-image {
+            height: 200px;
+            background: var(--background-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        .product-info {
+            padding: 1.5rem;
+        }
+
+        .product-category {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin: 0.5rem 0;
+            color: var(--text-dark);
+        }
+
+        .product-description {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .add-to-cart {
+            width: 100%;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 10px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .add-to-cart:hover {
+            background: var(--secondary-color);
+        }
+
+        /* Categories Section */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .category-card {
+            background: var(--white);
+            padding: 2rem;
+            text-align: center;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .category-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
+        .category-icon {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .category-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .category-count {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Product Detail */
+        .product-detail {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .product-detail-image {
+            height: 400px;
+            background: var(--background-light);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: var(--primary-color);
+        }
+
+        .product-details h1 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .product-meta {
+            margin-bottom: 2rem;
+        }
+
+        .meta-item {
+            display: flex;
+            margin-bottom: 0.5rem;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            width: 150px;
+        }
+
+        .safety-warning {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: var(--border-radius);
+            padding: 1rem;
+            margin: 2rem 0;
+        }
+
+        .warning-title {
+            color: #856404;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Cart Sidebar */
+        .cart-sidebar {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            height: 100vh;
+            background: var(--white);
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            transition: var(--transition);
+            z-index: 1001;
+            overflow-y: auto;
+        }
+
+        .cart-sidebar.open {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            margin-left: auto;
+        }
+
+        .cart-items {
+            padding: 1rem;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .cart-item-image {
+            width: 60px;
+            height: 60px;
+            background: var(--background-light);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary-color);
+        }
+
+        .cart-item-info {
+            flex: 1;
+        }
+
+        .cart-item-name {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .cart-item-price {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        .quantity-controls {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0.5rem 0;
+        }
+
+        .qty-btn {
+            background: var(--background-light);
+            border: none;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        .remove-item {
+            background: var(--warning-color);
+            color: var(--white);
+            border: none;
+            padding: 4px 8px;
+            border-radius: var(--border-radius);
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .cart-total {
+            padding: 1rem;
+            border-top: 2px solid #eee;
+            text-align: center;
+        }
+
+        .total-amount {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Educational Resources */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .resource-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .resource-header {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .resource-content {
+            padding: 1.5rem;
+        }
+
+        .resource-list {
+            list-style: none;
+        }
+
+        .resource-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .resource-list li:hover {
+            color: var(--primary-color);
+            padding-left: 10px;
+        }
+
+        /* Blog */
+        .blog-post {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .blog-header {
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+        }
+
+        .blog-date {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .blog-excerpt {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .blog-content {
+            padding: 2rem;
+        }
+
+        /* Modal */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Forms */
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-size: 1rem;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text-dark);
+            color: var(--white);
+            padding: 3rem 0 1rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-section ul li a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-section ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #444;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 100%;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 100%);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .search-box {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .product-detail {
+                grid-template-columns: 1fr;
+            }
+
+            .cart-sidebar {
+                width: 100%;
+                right: -100%;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        /* Age Verification Modal */
+        .age-verification {
+            background: var(--warning-color);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .age-verification h2 {
+            margin-bottom: 1rem;
+        }
+
+        .age-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        /* Loading Spinner */
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f3f3f3;
+            border-top: 2px solid var(--primary-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        /* Utility Classes */
+        .text-center { text-align: center; }
+        .text-left { text-align: left; }
+        .text-right { text-align: right; }
+        .mt-1 { margin-top: 1rem; }
+        .mt-2 { margin-top: 2rem; }
+        .mb-1 { margin-bottom: 1rem; }
+        .mb-2 { margin-bottom: 2rem; }
+        .p-1 { padding: 1rem; }
+        .p-2 { padding: 2rem; }
+        .hidden { display: none; }
+        .visible { display: block; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-top">
+            <div class="container">
+                ⚠️ Professional Use Only - Always Read Labels & Safety Instructions | Free Shipping on Orders Over $200
+            </div>
+        </div>
+        <nav class="navbar">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+                <a href="#" class="logo" onclick="showSection('home')">
+                    <i class="fas fa-leaf"></i> AgriShield Pro
+                </a>
+                
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#" onclick="showSection('home')">Home</a></li>
+                    <li><a href="#" onclick="showSection('categories')">Products</a></li>
+                    <li><a href="#" onclick="showSection('education')">Education</a></li>
+                    <li><a href="#" onclick="showSection('blog')">Blog</a></li>
+                    <li><a href="#" onclick="showSection('support')">Support</a></li>
+                </ul>
+                
+                <div class="header-actions">
+                    <div class="search-box">
+                        <input type="text" id="searchInput" placeholder="Search products..." onkeyup="searchProducts()">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div class="user-icon" onclick="showModal('login')">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="cart-icon" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </div>
+                    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <div class="container">
+                    <h1>Professional Pesticide Solutions</h1>
+                    <p>Comprehensive pest management with safety education and sustainable alternatives</p>
+                    <div class="cta-buttons">
+                        <a href="#" class="btn btn-primary" onclick="showSection('categories')">Shop Products</a>
+                        <a href="#" class="btn btn-secondary" onclick="showSection('education')">Learn Safe Usage</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="featured-products">
+                <div class="container">
+                    <h2 class="section-title">Featured Products</h2>
+                    <div class="products-grid" id="featuredProducts">
+                        <!-- Products will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories Section -->
+        <section id="categories" class="section">
+            <div class="container">
+                <h2 class="section-title">Product Categories</h2>
+                <div class="categories-grid">
+                    <div class="category-card" onclick="filterByCategory('insecticides')">
+                        <div class="resource-header">
+                            <h3><i class="fas fa-question-circle"></i> Frequently Asked Questions</h3>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li onclick="showFAQ('licensing')">Licensing Requirements</li>
+                                <li onclick="showFAQ('application-rates')">Application Rates & Timing</li>
+                                <li onclick="showFAQ('mixing')">Mixing Instructions</li>
+                                <li onclick="showFAQ('weather')">Weather Considerations</li>
+                                <li onclick="showFAQ('compatibility')">Tank Mix Compatibility</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3><i class="fas fa-phone"></i> Contact Support</h3>
+                        </div>
+                        <div class="resource-content">
+                            <p><strong>Technical Support:</strong><br>1-800-AGRI-PRO (24/7)</p>
+                            <p><strong>Sales Support:</strong><br>1-800-SALES-AG (Mon-Fri 8-6)</p>
+                            <p><strong>Emergency Hotline:</strong><br>1-800-POISON-1 (24/7)</p>
+                            <button class="btn btn-primary mt-1" onclick="showModal('contact')">Contact Form</button>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3><i class="fas fa-comments"></i> Live Chat</h3>
+                        </div>
+                        <div class="resource-content">
+                            <p>Get instant help from our agricultural experts.</p>
+                            <p><strong>Available:</strong> Mon-Fri 7AM-7PM EST</p>
+                            <button class="btn btn-primary mt-1" onclick="startLiveChat()">Start Chat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-total">
+            <div class="total-amount" id="cartTotal">$0.00</div>
+            <button class="btn btn-primary" onclick="proceedToCheckout()" style="width: 100%; margin-bottom: 1rem;">
+                Proceed to Checkout
+            </button>
+            <button class="btn btn-secondary" onclick="toggleCart()" style="width: 100%;">
+                Continue Shopping
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="modalOverlay" onclick="closeModal()">
+        <div class="modal" onclick="event.stopPropagation()">
+            <div class="modal-header">
+                <h3 id="modalTitle">Modal Title</h3>
+                <button class="close-modal" onclick="closeModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-content" id="modalContent">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AgriShield Pro</h3>
+                    <p>Your trusted partner in professional pest management with a commitment to safety and sustainability.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#" onclick="filterByCategory('insecticides')">Insecticides</a></li>
+                        <li><a href="#" onclick="filterByCategory('herbicides')">Herbicides</a></li>
+                        <li><a href="#" onclick="filterByCategory('fungicides')">Fungicides</a></li>
+                        <li><a href="#" onclick="filterByCategory('rodenticides')">Rodenticides</a></li>
+                        <li><a href="#" onclick="filterByCategory('biological')">Biological Solutions</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#" onclick="showSection('education')">Safety Guidelines</a></li>
+                        <li><a href="#" onclick="showSection('education')">Application Guides</a></li>
+                        <li><a href="#" onclick="showSection('blog')">Blog & News</a></li>
+                        <li><a href="#" onclick="showModal('privacy')">Privacy Policy</a></li>
+                        <li><a href="#" onclick="showModal('terms')">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#" onclick="showSection('support')">Contact Us</a></li>
+                        <li><a href="#" onclick="showSection('support')">FAQ</a></li>
+                        <li><a href="#" onclick="startLiveChat()">Live Chat</a></li>
+                        <li><a href="#" onclick="showModal('shipping')">Shipping Info</a></li>
+                        <li><a href="#" onclick="showModal('returns')">Returns Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AgriShield Pro. All rights reserved. | Professional Use Only | Always Read Label Instructions</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mock Data
+        const products = [
+            {
+                id: 1,
+                name: "ProShield Insecticide",
+                category: "insecticides",
+                price: 89.99,
+                description: "Broad-spectrum insecticide for professional agricultural use",
+                activeIngredient: "Chlorpyrifos 24%",
+                targetPests: "Aphids, Caterpillars, Thrips",
+                applicationRate: "1-2 oz per gallon",
+                reiHours: 24,
+                phiDays: 14,
+                restricted: true,
+                featured: true
+            },
+            {
+                id: 2,
+                name: "GreenGuard Herbicide",
+                category: "herbicides",
+                price: 124.50,
+                description: "Selective pre-emergence herbicide for crop protection",
+                activeIngredient: "Atrazine 50%",
+                targetPests: "Broadleaf weeds, Grasses",
+                applicationRate: "2-4 lbs per acre",
+                reiHours: 12,
+                phiDays: 21,
+                restricted: false,
+                featured: true
+            },
+            {
+                id: 3,
+                name: "FungiFree Solution",
+                category: "fungicides",
+                price: 156.75,
+                description: "Systemic fungicide for disease prevention and control",
+                activeIngredient: "Propiconazole 41.8%",
+                targetPests: "Rust, Powdery Mildew, Blight",
+                applicationRate: "4-8 fl oz per acre",
+                reiHours: 24,
+                phiDays: 7,
+                restricted: false,
+                featured: true
+            },
+            {
+                id: 4,
+                name: "RodentStop Bait",
+                category: "rodenticides",
+                price: 67.89,
+                description: "Professional rodent control bait stations",
+                activeIngredient: "Brodifacoum 0.005%",
+                targetPests: "Rats, Mice",
+                applicationRate: "1-2 stations per 100 sq ft",
+                reiHours: 0,
+                phiDays: 0,
+                restricted: true,
+                featured: false
+            },
+            {
+                id: 5,
+                name: "BioDefend Organic",
+                category: "biological",
+                price: 198.25,
+                description: "OMRI-listed biological insecticide",
+                activeIngredient: "Bacillus thuringiensis",
+                targetPests: "Caterpillars, Larvae",
+                applicationRate: "1-2 lbs per acre",
+                reiHours: 4,
+                phiDays: 0,
+                restricted: false,
+                featured: true
+            },
+            {
+                id: 6,
+                name: "CropShield Max",
+                category: "insecticides",
+                price: 210.99,
+                description: "Advanced systemic insecticide with extended control",
+                activeIngredient: "Imidacloprid 35%",
+                targetPests: "Sucking insects, Soil insects",
+                applicationRate: "4-8 fl oz per acre",
+                reiHours: 12,
+                phiDays: 21,
+                restricted: false,
+                featured: false
+            }
+        ];
+
+        const blogPosts = [
+            {
+                id: 1,
+                title: "Integrated Pest Management: A Sustainable Approach",
+                date: "2025-01-15",
+                excerpt: "Learn how IPM strategies can reduce pesticide use while maintaining effective pest control.",
+                content: "Integrated Pest Management (IPM) represents a paradigm shift in agricultural pest control..."
+            },
+            {
+                id: 2,
+                title: "Understanding Pesticide Resistance and Prevention",
+                date: "2025-01-12",
+                excerpt: "Discover strategies to prevent and manage pesticide resistance in your crops.",
+                content: "Pesticide resistance is a growing concern in modern agriculture..."
+            },
+            {
+                id: 3,
+                title: "New EPA Regulations: What You Need to Know",
+                date: "2025-01-10",
+                excerpt: "Stay compliant with the latest EPA regulations affecting pesticide use.",
+                content: "Recent changes in EPA regulations have significant implications for professional applicators..."
+            }
+        ];
+
+        // State Management
+        let currentSection = 'home';
+        let cart = [];
+        let currentProduct = null;
+        let filteredProducts = products;
+
+        // Initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            loadFeaturedProducts();
+            loadBlogPosts();
+            updateCartUI();
+        });
+
+        // Navigation Functions
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            
+            // Show target section
+            document.getElementById(sectionId).classList.add('active');
+            currentSection = sectionId;
+            
+            // Special handling for categories
+            if (sectionId === 'categories') {
+                loadAllProducts();
+            }
+            
+            // Close mobile menu
+            document.getElementById('navMenu').classList.remove('active');
+        }
+
+        function toggleMobileMenu() {
+            document.getElementById('navMenu').classList.toggle('active');
+        }
+
+        function goBack() {
+            showSection('categories');
+        }
+
+        // Product Functions
+        function loadFeaturedProducts() {
+            const featuredContainer = document.getElementById('featuredProducts');
+            const featuredProducts = products.filter(product => product.featured);
+            
+            featuredContainer.innerHTML = featuredProducts.map(product => `
+                <div class="product-card" onclick="showProductDetail(${product.id})">
+                    <div class="product-image">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category}</div>
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-price">${product.price.toFixed(2)}</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(${product.id})">
+                            Add to Cart
+                        </button>
+                        ${product.restricted ? '<div style="background: var(--warning-color); color: white; padding: 4px 8px; font-size: 0.8rem; border-radius: 4px; margin-top: 8px;">⚠️ Restricted Use</div>' : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function loadAllProducts() {
+            const container = document.getElementById('categoryProducts');
+            container.innerHTML = filteredProducts.map(product => `
+                <div class="product-card" onclick="showProductDetail(${product.id})">
+                    <div class="product-image">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="product-info">
+                        <div class="product-category">${product.category}</div>
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-price">${product.price.toFixed(2)}</div>
+                        <button class="add-to-cart" onclick="event.stopPropagation(); addToCart(${product.id})">
+                            Add to Cart
+                        </button>
+                        ${product.restricted ? '<div style="background: var(--warning-color); color: white; padding: 4px 8px; font-size: 0.8rem; border-radius: 4px; margin-top: 8px;">⚠️ Restricted Use</div>' : ''}
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function filterByCategory(category) {
+            filteredProducts = products.filter(product => product.category === category);
+            showSection('categories');
+            loadAllProducts();
+        }
+
+        function searchProducts() {
+            const query = document.getElementById('searchInput').value.toLowerCase();
+            filteredProducts = products.filter(product => 
+                product.name.toLowerCase().includes(query) ||
+                product.description.toLowerCase().includes(query) ||
+                product.activeIngredient.toLowerCase().includes(query) ||
+                product.targetPests.toLowerCase().includes(query)
+            );
+            
+            if (currentSection === 'categories') {
+                loadAllProducts();
+            }
+        }
+
+        function showProductDetail(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            currentProduct = product;
+            
+            const detailContent = document.getElementById('productDetailContent');
+            detailContent.innerHTML = `
+                <div class="product-detail">
+                    <div class="product-detail-image">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="product-details">
+                        <h1>${product.name}</h1>
+                        <div class="product-price" style="font-size: 2rem; margin-bottom: 1rem;">${product.price.toFixed(2)}</div>
+                        
+                        <div class="product-meta">
+                            <div class="meta-item">
+                                <span class="meta-label">Category:</span>
+                                <span>${product.category}</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Active Ingredient:</span>
+                                <span>${product.activeIngredient}</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Target Pests:</span>
+                                <span>${product.targetPests}</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">Application Rate:</span>
+                                <span>${product.applicationRate}</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">REI:</span>
+                                <span>${product.reiHours} hours</span>
+                            </div>
+                            <div class="meta-item">
+                                <span class="meta-label">PHI:</span>
+                                <span>${product.phiDays} days</span>
+                            </div>
+                        </div>
+                        
+                        ${product.restricted ? `
+                        <div class="safety-warning">
+                            <div class="warning-title">⚠️ RESTRICTED USE PESTICIDE</div>
+                            <p>This product is classified as a Restricted Use Pesticide and requires proper certification for purchase and use.</p>
+                        </div>
+                        ` : ''}
+                        
+                        <div class="safety-warning">
+                            <div class="warning-title">⚠️ SAFETY INFORMATION</div>
+                            <p>Always read and follow label instructions. Use appropriate personal protective equipment (PPE). Keep out of reach of children and pets.</p>
+                        </div>
+                        
+                        <button class="btn btn-primary" onclick="addToCart(${product.id})" style="font-size: 1.2rem; padding: 15px 30px; margin-top: 2rem;">
+                            Add to Cart - ${product.price.toFixed(2)}
+                        </button>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 3rem;">
+                    <h3 style="margin-bottom: 1rem;">Product Description</h3>
+                    <p>${product.description}</p>
+                    
+                    <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Safety Guidelines</h3>
+                    <ul style="padding-left: 2rem;">
+                        <li>Always wear appropriate PPE when handling this product</li>
+                        <li>Do not apply during windy conditions (>10 mph)</li>
+                        <li>Observe all re-entry intervals and pre-harvest intervals</li>
+                        <li>Store in original container in a secure location</li>
+                        <li>Dispose of empty containers according to label instructions</li>
+                    </ul>
+                </div>
+            `;
+            
+            showSection('productDetail');
+        }
+
+        // Cart Functions
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
+            
+            // Check if product requires age verification
+            if (product.restricted) {
+                showAgeVerification(() => {
+                    addProductToCart(product);
+                });
+            } else {
+                addProductToCart(product);
+            }
+        }
+
+        function addProductToCart(product) {
+            const existingItem = cart.find(item => item.id === product.id);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    ...product,
+                    quantity: 1
+                });
+            }
+            
+            updateCartUI();
+            showNotification(`${product.name} added to cart`);
+        }
+
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCartUI();
+        }
+
+        function updateQuantity(productId, change) {
+            const item = cart.find(item => item.id === productId);
+            if (!item) return;
+            
+            item.quantity += change;
+            
+            if (item.quantity <= 0) {
+                removeFromCart(productId);
+            } else {
+                updateCartUI();
+            }
+        }
+
+        function updateCartUI() {
+            const cartItems = document.getElementById('cartItems');
+            const cartCount = document.getElementById('cartCount');
+            const cartTotal = document.getElementById('cartTotal');
+            
+            // Update cart count
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            
+            // Update cart total
+            const totalAmount = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            cartTotal.textContent = `${totalAmount.toFixed(2)}`;
+            
+            // Update cart items
+            if (cart.length === 0) {
+                cartItems.innerHTML = '<div class="p-2 text-center">Your cart is empty</div>';
+            } else {
+                cartItems.innerHTML = cart.map(item => `
+                    <div class="cart-item">
+                        <div class="cart-item-image">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="cart-item-info">
+                            <div class="cart-item-name">${item.name}</div>
+                            <div class="cart-item-price">${item.price.toFixed(2)}</div>
+                            <div class="quantity-controls">
+                                <button class="qty-btn" onclick="updateQuantity(${item.id}, -1)">-</button>
+                                <span>${item.quantity}</span>
+                                <button class="qty-btn" onclick="updateQuantity(${item.id}, 1)">+</button>
+                            </div>
+                        </div>
+                        <button class="remove-item" onclick="removeFromCart(${item.id})">Remove</button>
+                    </div>
+                `).join('');
+            }
+        }
+
+        function toggleCart() {
+            document.getElementById('cartSidebar').classList.toggle('open');
+        }
+
+        function proceedToCheckout() {
+            if (cart.length === 0) {
+                showNotification('Your cart is empty');
+                return;
+            }
+            
+            // Check if cart contains restricted products
+            const hasRestricted = cart.some(item => item.restricted);
+            
+            if (hasRestricted) {
+                showModal('certification', {
+                    title: 'Certification Required',
+                    content: `
+                        <p>Your cart contains restricted use pesticides that require proper certification.</p>
+                        <div class="form-group">
+                            <label class="form-label">Certification Number:</label>
+                            <input type="text" class="form-input" placeholder="Enter certification number">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Upload Certification:</label>
+                            <input type="file" class="form-input" accept=".pdf,.jpg,.png">
+                        </div>
+                        <button class="btn btn-primary" onclick="proceedToPayment()">Verify & Continue</button>
+                    `
+                });
+            } else {
+                proceedToPayment();
+            }
+        }
+
+        function proceedToPayment() {
+            closeModal();
+            showNotification('Redirecting to secure checkout...');
+            // In a real application, this would redirect to a payment processor
+        }
+
+        // Blog Functions
+        function loadBlogPosts() {
+            const blogContainer = document.getElementById('blogPosts');
+            blogContainer.innerHTML = blogPosts.map(post => `
+                <article class="blog-post">
+                    <div class="blog-header">
+                        <div class="blog-date">${new Date(post.date).toLocaleDateString()}</div>
+                        <h2 class="blog-title">${post.title}</h2>
+                        <p class="blog-excerpt">${post.excerpt}</p>
+                    </div>
+                    <div class="blog-content">
+                        <p>${post.content}</p>
+                        <button class="btn btn-primary" onclick="showBlogPost(${post.id})">Read More</button>
+                    </div>
+                </article>
+            `).join('');
+        }
+
+        function showBlogPost(postId) {
+            const post = blogPosts.find(p => p.id === postId);
+            if (!post) return;
+            
+            showModal('blog-post', {
+                title: post.title,
+                content: `
+                    <div class="blog-date">${new Date(post.date).toLocaleDateString()}</div>
+                    <p>${post.content}</p>
+                    <p>This is where the full blog post content would appear...</p>
+                `
+            });
+        }
+
+        // Modal Functions
+        function showModal(type, options = {}) {
+            const modal = document.getElementById('modalOverlay');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('modalContent');
+            
+            title.textContent = options.title || getModalTitle(type);
+            content.innerHTML = options.content || getModalContent(type);
+            
+            modal.classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modalOverlay').classList.remove('active');
+        }
+
+        function getModalTitle(type) {
+            const titles = {
+                'login': 'Login / Register',
+                'contact': 'Contact Support',
+                'privacy': 'Privacy Policy',
+                'terms': 'Terms of Service',
+                'shipping': 'Shipping Information',
+                'returns': 'Returns Policy'
+            };
+            return titles[type] || 'Information';
+        }
+
+        function getModalContent(type) {
+            const contents = {
+                'login': `
+                    <div class="form-group">
+                        <label class="form-label">Email:</label>
+                        <input type="email" class="form-input" placeholder="Enter your email">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Password:</label>
+                        <input type="password" class="form-input" placeholder="Enter your password">
+                    </div>
+                    <button class="btn btn-primary" style="width: 100%; margin-bottom: 1rem;">Login</button>
+                    <button class="btn btn-secondary" style="width: 100%;">Create New Account</button>
+                `,
+                'contact': `
+                    <div class="form-group">
+                        <label class="form-label">Name:</label>
+                        <input type="text" class="form-input" placeholder="Your name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email:</label>
+                        <input type="email" class="form-input" placeholder="Your email">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Subject:</label>
+                        <input type="text" class="form-input" placeholder="Subject">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Message:</label>
+                        <textarea class="form-input" rows="4" placeholder="Your message"></textarea>
+                    </div>
+                    <button class="btn btn-primary">Send Message</button>
+                `,
+                'privacy': `
+                    <h4>Privacy Policy</h4>
+                    <p>This is a demo privacy policy. In a real application, this would contain comprehensive privacy policy information...</p>
+                `,
+                'terms': `
+                    <h4>Terms of Service</h4>
+                    <p>This is a demo terms of service. In a real application, this would contain comprehensive terms and conditions...</p>
+                `,
+                'shipping': `
+                    <h4>Shipping Information</h4>
+                    <p><strong>Standard Shipping:</strong> 3-5 business days</p>
+                    <p><strong>Express Shipping:</strong> 1-2 business days</p>
+                    <p><strong>Free Shipping:</strong> Orders over $200</p>
+                    <p><strong>Hazmat Surcharge:</strong> Additional fees may apply for certain products</p>
+                `,
+                'returns': `
+                    <h4>Returns Policy</h4>
+                    <p>Returns are accepted within 30 days of purchase for unopened products.</p>
+                    <p>Pesticides cannot be returned once opened due to safety regulations.</p>
+                `
+            };
+            return contents[type] || '<p>Content not available.</p>';
+        }
+
+        function showAgeVerification(callback) {
+            showModal('age-verification', {
+                title: 'Age Verification Required',
+                content: `
+                    <div class="age-verification">
+                        <h2>⚠️ Age Verification Required</h2>
+                        <p>This product is restricted and requires age verification.</p>
+                        <p>You must be 18 years or older to purchase this product.</p>
+                        <div class="age-buttons">
+                            <button class="btn btn-primary" onclick="confirmAge(true, ${callback})">I am 18 or older</button>
+                            <button class="btn btn-secondary" onclick="confirmAge(false)">I am under 18</button>
+                        </div>
+                    </div>
+                `
+            });
+        }
+
+        function confirmAge(isOfAge, callback) {
+            closeModal();
+            if (isOfAge) {
+                if (typeof callback === 'function') {
+                    callback();
+                }
+            } else {
+                showNotification('You must be 18 or older to purchase this product');
+            }
+        }
+
+        // Education Functions
+        function showEducationTopic(topic) {
+            const topics = {
+                'ppe': {
+                    title: 'Personal Protective Equipment (PPE)',
+                    content: 'Comprehensive guide to selecting and using appropriate PPE when handling pesticides...'
+                },
+                'application': {
+                    title: 'Safe Application Techniques',
+                    content: 'Learn proper application methods to ensure safety and effectiveness...'
+                },
+                'ipm': {
+                    title: 'Integrated Pest Management',
+                    content: 'Understanding IPM principles for sustainable pest control...'
+                }
+            };
+            
+            const topicInfo = topics[topic] || { title: 'Education Topic', content: 'Content not available.' };
+            showModal('education', topicInfo);
+        }
+
+        function showFAQ(topic) {
+            const faqs = {
+                'licensing': {
+                    title: 'Licensing Requirements',
+                    content: 'Information about pesticide applicator licensing and certification requirements...'
+                },
+                'application-rates': {
+                    title: 'Application Rates & Timing',
+                    content: 'Guidelines for proper application rates and timing for maximum effectiveness...'
+                }
+            };
+            
+            const faqInfo = faqs[topic] || { title: 'FAQ', content: 'Content not available.' };
+            showModal('faq', faqInfo);
+        }
+
+        // Support Functions
+        function startLiveChat() {
+            showNotification('Connecting to support agent... (Demo)');
+        }
+
+        // Utility Functions
+        function showNotification(message) {
+            // Create notification element
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top="category-icon"><i class="fas fa-bug"></i></div>
+                        <div class="category-name">Insecticides</div>
+                        <div class="category-count">24 Products</div>
+                    </div>
+                    <div class="category-card" onclick="filterByCategory('herbicides')">
+                        <div class="category-icon"><i class="fas fa-seedling"></i></div>
+                        <div class="category-name">Herbicides</div>
+                        <div class="category-count">18 Products</div>
+                    </div>
+                    <div class="category-card" onclick="filterByCategory('fungicides')">
+                        <div class="category-icon"><i class="fas fa-mushroom"></i></div>
+                        <div class="category-name">Fungicides</div>
+                        <div class="category-count">15 Products</div>
+                    </div>
+                    <div class="category-card" onclick="filterByCategory('rodenticides')">
+                        <div class="category-icon"><i class="fas fa-mouse"></i></div>
+                        <div class="category-name">Rodenticides</div>
+                        <div class="category-count">12 Products</div>
+                    </div>
+                    <div class="category-card" onclick="filterByCategory('biological')">
+                        <div class="category-icon"><i class="fas fa-leaf"></i></div>
+                        <div class="category-name">Biological</div>
+                        <div class="category-count">21 Products</div>
+                    </div>
+                </div>
+
+                <div class="products-grid" id="categoryProducts" style="margin-top: 3rem;">
+                    <!-- Filtered products will appear here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Detail Section -->
+        <section id="productDetail" class="section">
+            <div class="container">
+                <button class="btn btn-secondary mb-2" onclick="goBack()">
+                    <i class="fas fa-arrow-left"></i> Back to Products
+                </button>
+                <div id="productDetailContent">
+                    <!-- Product details will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="section">
+            <div class="container">
+                <h2 class="section-title">Educational Resources</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3><i class="fas fa-shield-alt"></i> Safety Guidelines</h3>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li onclick="showEducationTopic('ppe')">Personal Protective Equipment (PPE)</li>
+                                <li onclick="showEducationTopic('application')">Safe Application Techniques</li>
+                                <li onclick="showEducationTopic('storage')">Proper Storage Methods</li>
+                                <li onclick="showEducationTopic('disposal')">Safe Disposal Practices</li>
+                                <li onclick="showEducationTopic('first-aid')">Emergency First Aid</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3><i class="fas fa-leaf"></i> Environmental Impact</h3>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li onclick="showEducationTopic('bees')">Protecting Pollinators</li>
+                                <li onclick="showEducationTopic('water')">Water Contamination Prevention</li>
+                                <li onclick="showEducationTopic('soil')">Soil Health Considerations</li>
+                                <li onclick="showEducationTopic('resistance')">Resistance Management</li>
+                                <li onclick="showEducationTopic('beneficial')">Beneficial Organisms</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="resource-card">
+                        <div class="resource-header">
+                            <h3><i class="fas fa-recycle"></i> Sustainable Alternatives</h3>
+                        </div>
+                        <div class="resource-content">
+                            <ul class="resource-list">
+                                <li onclick="showEducationTopic('ipm')">Integrated Pest Management</li>
+                                <li onclick="showEducationTopic('biological-control')">Biological Control Methods</li>
+                                <li onclick="showEducationTopic('organic')">Organic Pesticides</li>
+                                <li onclick="showEducationTopic('cultural')">Cultural Control Practices</li>
+                                <li onclick="showEducationTopic('monitoring')">Pest Monitoring Systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section">
+            <div class="container">
+                <h2 class="section-title">Latest Blog Posts</h2>
+                <div id="blogPosts">
+                    <!-- Blog posts will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Support Section -->
+        <section id="support" class="section">
+            <div class="container">
+                <h2 class="section-title">Customer Support</h2>
+                <div class="resources-grid">
+                    <div class="resource-card">
+                        <div class
